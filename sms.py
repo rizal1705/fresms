@@ -1,11 +1,10 @@
 import requests
 
 def send_sms(number, message):
-    url = 'https://websms.shoutpoint.com/websmsapi/v1.0/send.jsp'
+    url = 'https://api.my1freehosting.com/SendSMS.php'
     payload = {
-        'phone': number,
-        'message': message,
-        'mtype': 'sms'
+        'Phone': number,
+        'Message': message,
     }
     response = requests.post(url, data=payload)
     return response.text
