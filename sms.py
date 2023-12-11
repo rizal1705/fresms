@@ -1,10 +1,10 @@
 import requests
 
 def send_sms(number, message):
-    url = 'https://api.my1freehosting.com/SendSMS.php'
+    url = 'https://freesms.telzir.com/webservice/sms.php'
     payload = {
-        'Phone': number,
-        'Message': message,
+        'to': number,
+        'msg': message,
     }
     response = requests.post(url, data=payload)
     return response.text
